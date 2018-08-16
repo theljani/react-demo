@@ -22,28 +22,28 @@ class Counter extends React.Component {
     this.onCounterBlur = this.onCounterBlur.bind(this);
   }
 
-  onChange = (event) => {
+  onChange(event) {
     event.persist();
     this.setState(prevState => ({
       [event.target.name]: event.target.value
     }));
   }
 
-  onIncrement = (event) => {
+  onIncrement(event) {
     event.preventDefault();
     this.setState(prevState => ({
       counter: parseInt(prevState.counter) + 1
     }));
   }
 
-  onDecrement = (event) => {
+  onDecrement(event) {
     event.preventDefault();
     this.setState(prevState => ({
       counter: parseInt(prevState.counter) - 1
     }));
   }
 
-  onCounterBlur = (event) => {
+  onCounterBlur(event) {
     event.persist();
     if(!event.target.value) {
       debugger
